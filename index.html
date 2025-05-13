@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+</head>
+<body>
+<audio id="thisSound" controls autoplay loop style="z-index:0;">
+  <source src="singleboi.mp3" type="audio/mpeg">
+</audio>
+<img id="bgPic" src="singleboi.gif"
+     style="border:0px; padding:0px; margin:0px; position:absolute; top:0px; left:0px; z-index:1;">
+<div id="clickToRemove" style="border:0px; padding:0px; margin:0px; position:absolute; top:0px; left:0px; z-index:2;
+                               background-color:black; opacity:.75; text-align:center; font-size:400pt; cursor:pointer;"
+      onclick="this.style.visibility='hidden'; document.getElementById('thisSound').play();">🔇</div>
+<script>
+   function resizeThis(){
+        document.getElementById("bgPic").style.width = screen.availWidth+"px";
+        document.getElementById("bgPic").style.height = screen.availHeight+"px";
+        document.getElementById("clickToRemove").style.width = screen.availWidth+"px";
+        document.getElementById("clickToRemove").style.height = screen.availHeight+"px";
+        document.body.style.overflow = "hidden";
+   }
+   setInterval(function(){resizeThis()},100)
+</script>
+</body>
+</html>

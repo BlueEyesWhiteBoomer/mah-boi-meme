@@ -13,10 +13,10 @@
       onclick="this.style.visibility='hidden'; document.getElementById('thisSound').play();">🔇</div>
 <script>
    function resizeThis(){
-        document.getElementById("bgPic").style.width = screen.availWidth+"px";
-        document.getElementById("bgPic").style.height = screen.availHeight+"px";
-        document.getElementById("clickToRemove").style.width = screen.availWidth+"px";
-        document.getElementById("clickToRemove").style.height = screen.availHeight+"px";
+        document.getElementById("bgPic").style.width = outerWidth+"px";
+        document.getElementById("bgPic").style.height = outerHeight+"px";
+        document.getElementById("clickToRemove").style.width = outerWidth+"px";
+        document.getElementById("clickToRemove").style.height = outerHeight+"px";
         document.body.style.overflow = "hidden";
    }
    setInterval(function(){resizeThis()},100)
